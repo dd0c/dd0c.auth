@@ -70,7 +70,7 @@
 - name: Ensure root ssh login is not possible
   ansible.builtin.lineinfile:
     path: /etc/ssh/sshd_config
-    regexp: '^#PermitRootLogin'
+    regexp: 'PermitRootLogin without-password'
     line: PermitRootLogin no
 
 #- name: Ensure ssh login with key is possible
