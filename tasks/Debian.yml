@@ -13,6 +13,12 @@
     update_password: always
     password: "{{ ansible_password|password_hash('sha512') }}"
 
+- name: Create home directory for user 'ansible'
+  ansible.builtin.file:
+    path: /home/ansible
+    owner: ansible
+    group: ansible
+    mode: '0700'
 
 - name: Create .ssh directory for user 'ansible'
   ansible.builtin.file:
