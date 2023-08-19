@@ -19,6 +19,7 @@
     owner: ansible
     group: ansible
     mode: '0700'
+    state: present
 
 - name: Create .ssh directory for user 'ansible'
   ansible.builtin.file:
@@ -26,6 +27,7 @@
     owner: ansible
     group: ansible
     mode: '0700'
+    state: present
 
 - name: Generate an OpenSSH keypair for user 'ansible' with the default values (521 bits, ed25519)
   community.crypto.openssh_keypair:
