@@ -22,7 +22,7 @@
 
 - name: Create .ssh directory for user 'ansible'
   ansible.builtin.file:
-    path: ~ansible/.ssh
+    path: /home/ansible/.ssh
     owner: ansible
     group: ansible
     mode: '0700'
